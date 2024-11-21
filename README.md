@@ -30,7 +30,15 @@ Ensure you have Python 3.9+ installed,
 
 GPU recommended for faster inference
 
-Libraries: transformers, torch, textsum, gradio, and whisperthen run:
+Libraries: transformers, torch, textsum, and whisperthen run:
+
+streamlit run app.py
+
+
+Note: This package uses ffmpeg, so it should be installed for this audiorecorder to work properly.
+
+On Ubuntu/Debian: sudo apt update && sudo apt install ffmpeg
+On Mac: brew install ffmpeg
 
 
 #**Usage**
