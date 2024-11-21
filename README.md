@@ -17,7 +17,7 @@ To set up the project, follow these steps:
 Clone the repository
 bash
 Copy code
-git clone https://github.com/your-username/SPEECH-TO-SUMMARIZE.git
+git clone https://github.com/Martialkouass/SPEECH-TO-SUMMARIZE.git
 cd SPEECH-TO-SUMMARIZE
 Install dependencies and requierements
 Ensure you have Python 3.9+ installed, then run:
