@@ -20,9 +20,9 @@ Translates the summary into French using Facebook's MBart model.
 #**Installation**
 To set up the project, follow these steps:
 
-git clone https://github.com/Martialkouass/SPEECH-TO-SUMMARIZE.git
+git clone https://github.com/Martialkouass/Speech-to-summarize.git
 
-cd SPEECH-TO-SUMMARIZE
+cd speech-to=summarize
 
 pip install -r requirements.txt  
 
