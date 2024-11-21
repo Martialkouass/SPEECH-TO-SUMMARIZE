@@ -22,7 +22,7 @@ To set up the project, follow these steps:
 
 git clone https://github.com/Martialkouass/Speech-to-summarize.git
 
-cd speech-to=summarize
+cd speech-to-summarize
 
 pip install -r requirements.txt  
 
