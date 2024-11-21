@@ -11,7 +11,6 @@ Original file is located at
 
 !pip install textsum
 ! pip install git+https://github.com/openai/whisper.git
-! pip install gradio -q
 !pip install --upgrade pip
 !pip install pydub
 !pip install streamlit-audiorecorder
@@ -19,13 +18,9 @@ Original file is located at
 from IPython.display import Audio
 import torch
 from pydub import AudioSegment
-import gradio as gr
-import time
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 from textsum.summarize import Summarizer
 from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
-
-"""**Import audio**"""
 
 
 
@@ -60,10 +55,6 @@ def transcribe (audio) :
     }
   result = pipe(audio,generate_kwargs=generate_kwargs)
   return result["text"]
-
-
-"""**OUTPUT SPEECH TO TEXT**"""
-
 
 
 """**III-SUMMURIZE TEXT**"""
