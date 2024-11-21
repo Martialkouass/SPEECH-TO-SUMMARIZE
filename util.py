@@ -27,9 +27,7 @@ from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
 
 """**Import audio**"""
 
-audio= Audio("/content/MLKDream_64kb.mp3")
 
-audio
 
 """**II- SPEECH TO TEXT**"""
 
@@ -60,14 +58,13 @@ def transcribe (audio) :
     "no_speech_threshold": 0.6,
     "return_timestamps": True,
     }
-  result = pipe("MLKDream_64kb.mp3",generate_kwargs=generate_kwargs)
+  result = pipe(audio,generate_kwargs=generate_kwargs)
   return result["text"]
 
-text = transcribe(audio)
 
 """**OUTPUT SPEECH TO TEXT**"""
 
-text
+
 
 """**III-SUMMURIZE TEXT**"""
 
@@ -79,7 +76,6 @@ def summarize (text):
       )
   return summarizer.summarize_string(text)
 
-summary=summarize(text)
 
 """**IV-TRANSLATE TO FRENCH**"""
 
@@ -94,11 +90,7 @@ def translate(text):
       )
   return tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
 
-text_translated = translate(summary)
 
-text_translated
-
-!pip freeze requirements.txt
 
 """**V-DEPLOYMENT ON GRADIO**"""
 
@@ -109,16 +101,3 @@ def process_audio(audio):
   translation = translate(summary)
   return translation
 
-process_audio(audio)
-
-#  Gradio Interface
-
-
-demo = gr.Interface(
-    process_audio,
-    ["state", gr.Audio(sources=["upload","microphone"], streaming=True)],
-    ["state", "text"],
-    live=True,
-)
-if __name__ == "__main__":
-    demo.launch()
