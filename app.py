@@ -33,14 +33,14 @@ with body :
 
     _, colb1, colb2 = st.columns([0.2, 0.7, 1])
 
-    if colb1.button("Upload an Image", on_click=change_state_uploader) :
+    if colb1.button("Upload an audio", on_click=change_state_uploader) :
         pass
     
-    elif colb2.button("Live Audio", on_click=change_state_record) :
+    elif colb2.button("Record audio", on_click=change_state_record) :
         pass
 
     if st.session_state["state"] == "Uploader" :
-        audio = audio = (st.file_uploader("Upload your audio file", type=["mp3", "wav"]))
+        audio = (st.file_uploader("Upload your audio file", type=["mp3", "wav"]))
     elif st.session_state["state"] == "record" :
       audio = audiorecorder("Click to record", "Click to stop recording")
       if len(audio) > 0:
@@ -49,7 +49,7 @@ with body :
         st.write(f"Frame rate: {audio.frame_rate}, Frame width: {audio.frame_width}, Duration: {audio.duration_seconds} seconds")
 
 
-    if audio is not None:
+    if audio :
       st.audio(audio)
       audio = AudioSegment.from_file(audio)
       with st.form("Result"):
