@@ -27,6 +27,10 @@ cd speech-to-summarize
 
 pip install -r requirements.txt  
 
+for MacOS
+brew install portaudio
+pip install pyaudio
+
 Ensure you have Python 3.9+ installed,
 
 GPU recommended for faster inference
