@@ -1,7 +1,7 @@
 # SPEECH-TO-SUMMARIZE :Transcription, Summarization, and Translation
 
 
-This project processes audio files by transcribing speech to text, summarizing the transcription, and translating the summary into French. It uses OpenAI's Whisper for transcription, a LED-based summarizer for summarization, and MBart for multilingual translation on https://huggingface.co/
+This project processes audio files by transcribing speech to text, summarizing the transcription, and translating the summary into French. It uses OpenAI's Whisper for transcription, a LED-based summarizer for summarization
 
 #**Features**
 
@@ -13,9 +13,7 @@ Text Summarization:
 
 Generates concise summaries from the transcribed text using the pszemraj/led-large-book-summary model.
 
-Text Translation:
 
-Translates the summary into French using Facebook's MBart model.
 
 #**Installation**
 
@@ -36,8 +34,6 @@ Ensure you have Python 3.9+ installed,
 GPU recommended for faster inference
 
 Libraries: transformers, torch, textsum, and whisperthen run:
-
-streamlit run app.py
 
 
 Note: This package uses ffmpeg, so it should be installed for this audiorecorder to work properly.
