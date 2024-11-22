@@ -1,4 +1,4 @@
-# SPEECH-TO-SUMMARIZE :Transcription, Summarization, and Translation
+# SPEECH-TO-SUMMARIZE :Transcription, Summarization
 
 
 This project processes audio files by transcribing speech to text, summarizing the transcription, and translating the summary into French. It uses OpenAI's Whisper for transcription, a LED-based summarizer for summarization
