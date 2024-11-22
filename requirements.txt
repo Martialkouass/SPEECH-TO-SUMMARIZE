@@ -379,7 +379,6 @@ pycparser==2.22
 pydantic==2.9.2
 pydantic_core==2.23.4
 pydata-google-auth==1.8.2
-pydeck==0.9.1
 pydot==3.0.2
 pydotplus==2.0.2
 PyDrive==1.3.1
@@ -479,8 +478,6 @@ srsly==2.4.8
 stanio==0.5.1
 starlette==0.41.3
 statsmodels==0.14.4
-streamlit==1.40.1
-streamlit-audiorecorder==0.0.6
 StrEnum==0.4.15
 stringzilla==3.10.10
 sympy==1.13.1
@@ -530,7 +527,7 @@ tweepy==4.14.0
 typeguard==4.4.1
 typer==0.13.0
 types-pytz==2024.2.0.20241003
-types-setuptools==75.5.0.20241119
+types-setuptools==75.5.0.20241122
 typing_extensions==4.12.2
 tzdata==2024.2
 tzlocal==5.2
@@ -543,7 +540,6 @@ vega-datasets==0.9.0
 wadllib==1.3.6
 wandb==0.18.7
 wasabi==1.1.3
-watchdog==6.0.0
 wcwidth==0.2.13
 weasel==0.4.1
 webcolors==24.11.1
